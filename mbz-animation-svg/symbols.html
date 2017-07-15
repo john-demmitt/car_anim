@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Symbols in SVG</title>
+		<style type="text/css">
+			body { font-family: 'Arial'; }
+			svg text { font-size: 8px; fill: #fff; text-anchor: end; }
+			svg text.left { text-anchor: start; }
+			svg text.right { text-anchor: end; }
+		</style>
+	</head>
+	<body>
+		<svg width="600" height="700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 350" style="enable-background:new 0 0 300 350;" xml:space="preserve">
+
+			<rect style="fill:#D2D0B8;" width="300" height="350"/>
+			<polygon style="fill:#FFFFFF;" points="156.51, 0 156.51, 12.448 173.213, 20.615 173.213, 0"/>
+			<circle style="fill:#78685F;" cx="135.115" cy="89.363" r="85.674"/>
+			<path style="fill:#604A3E;" d="M118.109, 15.605c40.18-5.969, 77.59, 21.764, 83.559, 61.944 C190.426, 40.206, 155.054, 14.035, 118.109, 15.605z"/>
+			<path style="fill:#FFFFFF;" d="M173.213, 29.447v31.286l-16.703, 8.375V20.002C165.417, 23.418, 173.213, 29.447, 173.213, 29.447z"/>
+			<circle style="fill:#4E707C;" cx="190.35" cy="143.21" r="90.233"/>
+			<path style="fill:#344C4A;" d="M117.346, 147.25c0-40.62, 32.929-73.55, 73.55-73.55C152.306, 79.332, 121.221, 110.475, 117.346, 147.25z"/>
+			<path style="fill:#FFFFFF;" d="M156.51, 82.324v36.495l16.703, 8.375V75.947C165.292, 77.716, 156.51, 82.324, 156.51, 82.324z"/>
+			<circle style="fill:#AAA979;" cx="124.117" cy="221.155" r="111.396"/>
+			<path style="fill:#8E8B52;" d="M90.218, 136.327c47.5-19.855, 102.101, 2.556, 121.956, 50.056 C186.725, 144.011, 135.115, 122.884, 90.218, 136.327z"/>
+			<path style="fill:#FFFFFF;" d="M173.213, 141.822v55.112l-16.703, 11.763v-74.531C165.583, 137.231, 173.213, 141.822, 173.213, 141.822z"/>
+			<circle style="fill:#A576B3;" cx="198.347" cy="262.612" r="72.791"/>
+			<path style="fill:#855497;" d="M138.602, 262.612c0-32.996, 26.749-59.745, 59.745-59.745C167, 207.442, 141.75, 232.739, 138.602, 262.612 z"/>
+			<path style="fill:#FFFFFF;" d="M173.213, 257.705v-49.274c-9.249, 4.059-16.703, 11.612-16.703, 11.612v37.662 c-8.384, 3.326-14.315, 11.503-14.315, 21.071c0, 12.518, 10.148, 22.667, 22.667, 22.667c12.518, 0, 22.667-10.148, 22.667-22.667 C187.529, 269.208, 181.597, 261.031, 173.213, 257.705z"/>			
+			
+			<text class="right" x="150" y="50">SAMPLE TITLE</text>
+			<text class="right" x="150" y="59">Short text description</text>
+			<text class="left" x="180" y="105">SAMPLE TITLE</text>
+			<text class="left" x="180" y="114">Short text description</text>
+			<text class="right" x="150" y="175">SAMPLE TITLE</text>
+			<text class="right" x="150" y="184">Short text description</text>
+			<text class="left" x="180" y="240">SAMPLE TITLE</text>
+			<text class="left" x="180" y="249">Short text description</text>
+			<symbol id="myart">
+				<path  d="M12.863, 19.097l-2.948-4.467l-3.101, 
+				4.362l0.241-5.346l-5.072, 
+				1.706l3.337-4.184L0.213, 
+				9.568l5.159-1.423l-3.19-4.297 l5.01, 
+				1.881L7.137, 0.378l2.948, 
+				4.467l3.101-4.362l-0.241, 
+				5.346l5.072-1.706L14.68, 8.306l5.107, 
+				1.601l-5.159, 1.423l3.19,  4.297 
+				l-5.01-1.881L12.863, 19.097z M10, 
+				7.024c-1.499, 0-2.714, 1.215-2.714, 
+				2.714S8.501,  12.451,  10,  12.451s2.714-1.215, 
+				2.714-2.714 S11.499,  7.024,  10,  7.024z"/>
+			</symbol>
+				<use style="fill:#ffffff;" xlink:href="#myart" x="70" y="5" transform="scale(1.7,1.7), skewX(25)"/>
+				<use style="fill:#354c4a;" xlink:href="#myart" x="180" y="75" />
+				<use style="fill:rgba(255,255,255,.4)" xlink:href="#myart" x="130" y="145" />
+				<use style="fill:rgba(0,0,0,.2)" xlink:href="#myart" x="180" y="210" />
+
+		</svg>
+		
+	</body>
+</html>
