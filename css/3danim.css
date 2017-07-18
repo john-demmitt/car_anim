@@ -16,12 +16,17 @@ html, body {
   .card {
     width: 50%;
     position: absolute;
-  perspective: 1200px;
+  perspective: 1400px;
     
   }
 
   svg {
+    display: block;
     overflow: visible;
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    border: 0;
   }
 
  
