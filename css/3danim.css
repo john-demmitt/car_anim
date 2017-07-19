@@ -16,7 +16,7 @@ html, body {
   .card {
     width: 50%;
     position: absolute;
-  perspective: 1400px;
+  perspective: 2000px;
     
   }
 
