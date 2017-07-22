@@ -15,16 +15,16 @@ jQuery(document).ready(function($) {
     var wheelRot = TweenLite.to([fWheel, rWheel], 5, { rotation: -4800, transformOrigin: "50% 50%" });
     var esvMove = TweenLite.fromTo($("#esv"), 5, { x: "400vw" }, { x: "-400vw" });*/
     var rev = new TimelineMax();
-    tl.to(esv, 0.1, {rotationY: 180}, "prep").to(esv, 0.1, {y:"-=141"}, "prep").to(mbz, 0.1, {rotationY: 180}, "prep").to(mbz, 0.1, {y:"+=167"}, "prep").fromTo(mbz, 4, {  x: width }, {x: -width}, "reverse")
-    .to([fRim, rRim], 4, { rotation: -4000, transformOrigin: "50% 50%"}, "reverse")
-    .to([fWheel, rWheel], 4, { rotation: 4000, transformOrigin: "50% 50%" }, "reverse")
-    .fromTo(esv, 4, { x: -width }, { x: width }, "reverse")
-    .to(svg, 0.5, {autoAlpha:1}, "reverse");
-    
-   /* rimsRot("mbz").
-    mbzMove("mbz").
-    wheelRot("esv").
-    esvMove("esv");*/
+    rev.to(esv, 0.1, { rotationY: 180 }, "prep").to(esv, 0.1, { y: "-=160" }, "prep").to(mbz, 0.1, { rotationY: 180 }, "prep").to(mbz, 0.1, { y: "+=180" }, "prep").fromTo(mbz, 4, { x: width }, { x: -width }, "reverse")
+        .to([fRim, rRim], 4, { rotation: -4000, transformOrigin: "50% 50%" }, "reverse")
+        .to([fWheel, rWheel], 4, { rotation: 4000, transformOrigin: "50% 50%" }, "reverse")
+        .fromTo(esv, 4, { x: -width }, { x: width }, "reverse")
+        .to(svg, 0.5, { autoAlpha: 1 }, "reverse");
+
+    /* rimsRot("mbz").
+     mbzMove("mbz").
+     wheelRot("esv").
+     esvMove("esv");*/
 
 
     /*pauseBtn.onclick = function() {
