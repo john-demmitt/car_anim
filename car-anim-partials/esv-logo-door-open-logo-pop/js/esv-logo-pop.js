@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     var width = $(document).width();
     var fWheel = $("#fWheel");
     var rWheel = $("#rWheel");
@@ -27,9 +27,14 @@ jQuery(document).ready(function($) {
         }, "open")
         .fromTo(logo, 1, {
             opacity: 0,
-            scale3d(.3, .3, .3)
+            scaleX: 0.3,
+            scaleY: 0.3,
+            scaleZ: 0.3
         }, {
-            opacity: 1
+            opacity: 1,
+            scaleX: 1,
+            scaleY: 1,
+            scaleZ: 1
         }, "pop")
         .to(rDoor, 1, {
             rotationY: 0,
