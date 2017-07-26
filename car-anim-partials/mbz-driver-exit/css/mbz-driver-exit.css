@@ -10,14 +10,15 @@ body {
   width: 95%;
   height: 95%;
   position: relative;
-  /* transform-style: preserve-3d;
-    perspective: 200px;*/
+  transform-style: preserve-3d;
+    perspective: 200px;
 }
 
 .card {
   width: 50%;
   position: absolute;
   perspective: 2000px;
+  transform-style: preserve-3d;
 }
 
 svg {
@@ -28,7 +29,7 @@ svg {
   border: 0;
 }
 
-svg#esv {
+svg#mbz {
   visibility: hidden;
 }
 
@@ -36,7 +37,18 @@ svg#rDoor {
   visibility: hidden;
 }
 
-svg#logo {
+svg#drvr {
   visibility: hidden;
-  margin-top: -25%;
+}
+
+svg#dDoor {
+  visibility: hidden;
+}
+
+
+.a, .b, .c {
+  width: 20%;
+  position: absolute;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }

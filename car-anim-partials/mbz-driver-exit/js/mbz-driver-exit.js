@@ -1,40 +1,46 @@
 jQuery(document).ready(function ($) {
     var width = $(document).width();
-    var fWheel = $("#fWheel");
-    var rWheel = $("#rWheel");
-    var half = width / 6;
+    var fRim = $("#fRim");
+    var rRim = $("#rRim");
+    var half = width / 4;
     var rDoor = $("#rDoor");
-    var esv = $("#esv");
-    var logo = $("#logo");
+    var dDoor = $("#dDoor");
+    var mbz = $("#mbz");
+    var drvr = $("#drvr");
 
     var tl = new TimelineMax();
-    tl.to([fWheel, rWheel], 2, {
+    tl.to([fRim, rRim], 2, {
             rotation: -1800,
             transformOrigin: "50% 50%"
         }, "driveon")
-        .fromTo([esv, rDoor, logo], 2, {
+        .fromTo([mbz, rDoor, dDoor, drvr], 2, {
             x: width
         }, {
             x: half
         }, "driveon")
-        .to([esv, rDoor], 0.5, {
+        .to([mbz, rDoor, dDoor], 0.5, {
             autoAlpha: 1
         }, "driveon")
+        .to(dDoor, 1, {
+            rotationY: -75,
+            transformOrigin: "108 0 -1",
+            ease: "Power4.easeInOut"
+        }, "dDOpen")
+        .to(drvr, 0.5, {
+            autoAlpha: 1, scale: 2
+        }, "exit")
+        .to(dDoor, 0.5, {
+            rotationY: 0,
+            transformOrigin: "108 0 -1",
+            ease: "Power4.easeInOut",
+            delay: 1
+        }, "rDOpen")
         .to(rDoor, 1, {
             rotationY: -75,
-            transformOrigin: "230 78 -10",
-            ease: Power4.easeInOut
-        }, "open")
-        .to(rDoor, 1, {
-            rotationY: 0,
-            transformOrigin: "230 78 -10",
-            ease: Power4.easeInOut,
-            delay: 1
-        }, "open")
-        .to(logo, 0.5, {
-            autoAlpha: 1
-        }, "driveoff")
-        .to([esv, rDoor], 2, {
+            transformOrigin: "227 0 -1",
+            ease: "Power4.easeInOut"
+        }, "rDOpen")
+        .to([mbz, rDoor, dDoor], 2, {
             x: -width
         }, "driveoff");
 });
