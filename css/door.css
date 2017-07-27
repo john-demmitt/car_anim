@@ -14,15 +14,14 @@ html, body {
   }
 
   .card {
-    width: 50%;
+    width: 25%;
     position: absolute;
-  perspective: 2000px;
+  perspective: 1000px;
   }
 
   svg {
     display: block;
     overflow: visible;
-    visibility: hidden;
     padding: 0;
     margin: 0;
     border: 0;

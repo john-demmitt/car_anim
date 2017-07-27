@@ -27,7 +27,9 @@ $(document).ready(function ($) {
             ease: "Power4.easeInOut"
         }, "dDOpen")
         .to(drvr, 0.5, {
-            autoAlpha: 1
+            autoAlpha: 1,
+            scaleX:2,
+            scaleY:2
         }, "exit")
         .to(dDoor, 1, {
             transformOrigin: "30% center -1",

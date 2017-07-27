@@ -10,11 +10,14 @@ body {
   width: 95%;
   height: 95%;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .card {
   width: 50%;
   position: absolute;
+  margin-top: 20;
 perspective: 1000px;
 transform-style: preserve-3d;
 perspective-origin:  right;
@@ -30,17 +33,29 @@ svg {
 
 svg#mbz {
   visibility: hidden;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 svg#rDoor {
   visibility: hidden;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 svg#drvr {
   visibility: hidden;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 svg#dDoor {
   visibility: hidden;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
