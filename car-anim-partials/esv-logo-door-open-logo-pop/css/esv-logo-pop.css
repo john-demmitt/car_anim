@@ -6,18 +6,19 @@ body {
 }
 
 .container {
-  margin: 2.5%;
   width: 95%;
   height: 95%;
   position: relative;
-  /* transform-style: preserve-3d;
-    perspective: 200px;*/
+  display: flex;
+  align-items: center;
 }
 
 .card {
-  width: 50%;
+  width: 100%;
   position: absolute;
-  perspective: 2000px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  perspective-origin:  right;
 }
 
 svg {
@@ -30,13 +31,29 @@ svg {
 
 svg#esv {
   visibility: hidden;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 svg#rDoor {
   visibility: hidden;
+  position: absolute;
+  top:0;
+  left:0;
+  backface-visibility: hidden;
+}
+
+svg#rDInner{
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left:0;
 }
 
 svg#logo {
   visibility: hidden;
-  margin-top: -25%;
+  position: absolute;
+  top:0;
+  left:0;
 }

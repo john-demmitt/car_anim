@@ -5,47 +5,24 @@ jQuery(document).ready(function ($) {
     var half = width / 6;
     var rDoor = $("#rDoor");
     var esv = $("#esv");
-    var logo = $("#logo");
+    var rDInner = $("rDInner");
 
     var tl = new TimelineMax();
     tl.to([fWheel, rWheel], 2, {
-            rotation: -1800,
-            transformOrigin: "50% 50%"
-        }, "driveon")
-        .fromTo([esv, rDoor, logo], 2, {
+        rotation: -1800,
+        transformOrigin: "50% 50%"
+    }, "driveon")
+        .fromTo([esv, rDoor, rDInner], 2, {
             x: width
         }, {
-            x: half
+            x: 0
         }, "driveon")
-        .to([esv, rDoor], 0.5, {
+        .to([esv, rDoor, rDInner], 0.5, {
             autoAlpha: 1
         }, "driveon")
-        .to(rDoor, 1, {
+        .to([rDoor, rDInner], 1, {
             rotationY: -75,
             transformOrigin: "230 78 -10",
             ease: Power4.easeInOut
         }, "open")
-        .fromTo(logo, 1, {
-            opacity: 0,
-            scaleX: 0.3,
-            scaleY: 0.3,
-            scaleZ: 0.3
-        }, {
-            opacity: 1,
-            scaleX: 1,
-            scaleY: 1,
-            scaleZ: 1
-        }, "pop")
-        .to(rDoor, 1, {
-            rotationY: 0,
-            transformOrigin: "230 78 -10",
-            ease: Power4.easeInOut,
-            delay: 1
-        }, "open")
-        .to(logo, 0.5, {
-            autoAlpha: 1
-        }, "driveoff")
-        .to([esv, rDoor], 2, {
-            x: -width
-        }, "driveoff");
-});
+        .to([esv, rDoor, rDInner], 1, {attr: {viewBox: "255.490 85.885 0.321 0.083"}, ease:Power3.easeInOut}, "zoom");});
