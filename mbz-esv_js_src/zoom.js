@@ -3,7 +3,7 @@ $(function () {
     var logo = $("#logo");
 
 
-    /*function zoomTl(){
+    function zoomTl(){
     const tl = new TimelineMax();
 
     tl.to(esv, 2, {attr:{ viewBox: "230 70.8 55 14.6"}}, "zoom")
@@ -12,7 +12,5 @@ $(function () {
     return tl;
     }
 
-    zoomTl();*/
-TweenMax.set(logo, {transformOrigin:"50% 50% 0px"});
-    TweenMax.to(logo, 2, {scaleX: 5, scaleY:5});
+    
 });

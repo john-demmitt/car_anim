@@ -13,10 +13,14 @@ justify-content: center;
 }
 
 .card   {
-min-width: 200px;
+/*min-width: 200px;
 max-width: 600px;
+width:50%;*/
 width:50%;
-
+  position: absolute;
+perspective: 1000px;
+transform-style: preserve-3d;
+perspective-origin:  right;
 }
 
 svg {
