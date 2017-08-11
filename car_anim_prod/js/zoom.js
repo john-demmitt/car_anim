@@ -1,16 +1,16 @@
 $(function () {
     var esv = $("#esv");
     var logo = $("#logo");
-
+var svg=$("svg");
 
     function zoomTl(){
     const tl = new TimelineMax();
 
-    tl.to(esv, 2, {attr:{ viewBox: "230 70.8 55 14.6"}}, "zoom")
-    .to(logo, 2, {scaleX: 5, scaleY: 5}, "zoom");
+    tl.set(svg,{visibility:"visible"}).to(esv, 0.75, {attr:{ viewBox: "229 60.3 13 3"}}, "zoom");
 
     return tl;
     }
 
-    
+   zoomTl();
+ 
 });
