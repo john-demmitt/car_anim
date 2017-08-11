@@ -12,7 +12,7 @@ var svg = $("svg");
 
 function esvAcLt() {
 const tl = new TimelineMax();
-tl.to([fWheel, rWheel], 4, { rotation: -4000, transformOrigin: "50% 50%" }, "eAL")
+tl.to([fWheel, rWheel], 4, { rotation: -3000, transformOrigin: "50% 50%" }, "eAL")
 .fromTo($("#esv"), 4, { x: width, rotationY:0 }, { x: -width }, "eAL")
 .to(svg, 0.1, {autoAlpha:1}, "eAL");
 
@@ -32,7 +32,7 @@ function mbzAcLt() {
 
     function esvAcRt() {
         const tl = new TimelineMax();
-        tl.to([fWheel, rWheel], 4, { rotation: 4000, transformOrigin: "50% 50%" }, "eAR")
+        tl.to([fWheel, rWheel], 4, { rotation: 3000, transformOrigin: "50% 50%" }, "eAR")
         .fromTo($("#esv"), 4, { x: -width, rotationY:180 }, { x: width }, "eAR")
         .to(svg, 0.1, {autoAlpha:1}, "eAR");
         
@@ -53,4 +53,5 @@ function mbzAcLt() {
             const tonfro = new TimelineMax();
             tonfro.add(mbzAcLt()).add(mbzAcRt());
 
+            
 });
