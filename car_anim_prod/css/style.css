@@ -1,0 +1,33 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100vw;
+  height:100vh;
+}
+
+.card {
+  display: flex;
+  width:50%;
+  height:auto;
+  position: relative;
+perspective: 1000px;
+perspective-origin:  right;
+}
+
+svg {
+  visibility:hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow:hidden;
+}
