@@ -23,8 +23,15 @@ perspective: 1000px;
 perspective-origin:  right;
 }
 
+.door {
+  position:absolute;
+  top:0;
+  left:0;
+
+}
+
 svg {
-  visibility:hidden;
+  visibility:visible;
   position: absolute;
   padding: 0;
   margin: 0;
